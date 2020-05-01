@@ -26,16 +26,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRegistros = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuDepartamento = new javax.swing.JMenuItem();
         jMenuPuesto = new javax.swing.JMenuItem();
         jMenuConceptos = new javax.swing.JMenuItem();
         jMenuEmpleados = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
+        jMenuNDet = new javax.swing.JMenuItem();
         jMenuExtras = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuFinal = new javax.swing.JMenuItem();
@@ -45,46 +47,80 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuinfor = new javax.swing.JMenuItem();
         jMenuSalir = new javax.swing.JMenuItem();
 
+        jMenuItem1.setText("jMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setExtendedState(6);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 406, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         jMenuRegistros.setText("Abrir");
 
-        jMenuItem1.setText("Todos los registros");
-        jMenuRegistros.add(jMenuItem1);
+        jMenuItem2.setText("Todos los registros");
+        jMenuRegistros.add(jMenuItem2);
 
         jMenuBar1.add(jMenuRegistros);
 
         jMenu2.setText("Catalogos");
 
         jMenuDepartamento.setText("Departamento");
+        jMenuDepartamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuDepartamentoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuDepartamento);
 
         jMenuPuesto.setText("Puesto");
+        jMenuPuesto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuPuestoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuPuesto);
 
         jMenuConceptos.setText("Conceptos");
+        jMenuConceptos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConceptosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuConceptos);
 
         jMenuEmpleados.setText("Empleados");
+        jMenuEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEmpleadosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuEmpleados);
 
         jMenuBar1.add(jMenu2);
 
         jMenu5.setText("Procesos");
 
+        jMenuNDet.setText("Nomina Detalle");
+        jMenuNDet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuNDetActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuNDet);
+
         jMenuExtras.setText("Nomina Extras");
+        jMenuExtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuExtrasActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuExtras);
 
         jMenuBar1.add(jMenu5);
@@ -92,6 +128,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu6.setText("Informes");
 
         jMenuFinal.setText("Nomina Final");
+        jMenuFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuFinalActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuFinal);
 
         jMenuBar1.add(jMenu6);
@@ -109,6 +150,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu8.add(jMenuinfor);
 
         jMenuSalir.setText("Salir");
+        jMenuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSalirActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuSalir);
 
         jMenuBar1.add(jMenu8);
@@ -128,6 +174,63 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDepartamentoActionPerformed
+        // TODO add your handling code here:
+        
+        Departamentos dep = new Departamentos();
+        jDesktopPane1.add(dep);
+        
+    }//GEN-LAST:event_jMenuDepartamentoActionPerformed
+
+    private void jMenuPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPuestoActionPerformed
+        // TODO add your handling code here:
+        Puestos pu = new Puestos();
+        jDesktopPane1.add(pu);
+    }//GEN-LAST:event_jMenuPuestoActionPerformed
+
+    private void jMenuConceptosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConceptosActionPerformed
+        // TODO add your handling code here:
+        Concepto co = new Concepto();
+        jDesktopPane1.add(co);
+    }//GEN-LAST:event_jMenuConceptosActionPerformed
+
+    private void jMenuEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEmpleadosActionPerformed
+        // TODO add your handling code here:
+        
+        Empleados em = new Empleados();
+        jDesktopPane1.add(em);
+        
+    }//GEN-LAST:event_jMenuEmpleadosActionPerformed
+
+    private void jMenuExtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuExtrasActionPerformed
+        // TODO add your handling code here:
+        
+        NominaE ne = new NominaE();
+        jDesktopPane1.add(ne);
+        
+    }//GEN-LAST:event_jMenuExtrasActionPerformed
+
+    private void jMenuFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuFinalActionPerformed
+        // TODO add your handling code here:
+        
+        NominaFinal NF = new NominaFinal();
+        jDesktopPane1.add(NF);
+        
+    }//GEN-LAST:event_jMenuFinalActionPerformed
+
+    private void jMenuNDetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuNDetActionPerformed
+        // TODO add your handling code here:
+        
+        NonimaDetalle ND = new NonimaDetalle();
+        jDesktopPane1.add(ND);
+         
+    }//GEN-LAST:event_jMenuNDetActionPerformed
+
+    private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenuSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +282,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuExtras;
     private javax.swing.JMenuItem jMenuFinal;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuNDet;
     private javax.swing.JMenuItem jMenuPuesto;
     private javax.swing.JMenu jMenuRegistros;
     private javax.swing.JMenuItem jMenuSalir;
